@@ -1,0 +1,38 @@
+﻿<Window x:Name="gameWindow" x:Class="BattleSheeps.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BattleSheeps"
+        mc:Ignorable="d"
+        Title="BattleSheeps" Height="593" Width="862" WindowStartupLocation="CenterScreen" ShowActivated="True" WindowStyle="None" MinWidth="862" MinHeight="593" MaxWidth="0" MaxHeight="0" Padding="15" ResizeMode="CanMinimize" Icon="Images/sheepICO.ico">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="playerStackpanel" HorizontalAlignment="Left" Height="400" Margin="10,183,0,0" VerticalAlignment="Top" Width="400" Panel.ZIndex="3"/>
+        <StackPanel x:Name="computerStackpanel" HorizontalAlignment="Left" Height="400" Margin="452,183,0,0" VerticalAlignment="Top" Width="400" Panel.ZIndex="3"/>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Height="32" Margin="793,100,0,0" VerticalAlignment="Top" Width="41" Click="btnBack_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFAEAEAE"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnReset" Content="RESET" HorizontalAlignment="Left" Height="32" Margin="793,60,0,0" VerticalAlignment="Top" Width="41" Click="btnReset_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFAEAEAE"/>
+            </Button.Effect>
+        </Button>
+        <Label Content="YOU" HorizontalAlignment="Left" Margin="216,15,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Blue"/>
+        <Label Content="COMPUTER" HorizontalAlignment="Left" Margin="548,15,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Red"/>
+        <Label x:Name="lblScorePlayer" Content="[0]" HorizontalAlignment="Left" Margin="345,15,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Blue"/>
+        <Label x:Name="lblScoreComputer" Content="[0]" HorizontalAlignment="Left" Margin="454,15,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Red"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="407,15,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label x:Name="lblPlayerSheep" Content="# enemy sheep destroyed" HorizontalAlignment="Left" Margin="216,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.385" Width="168" Foreground="Blue"/>
+        <Label x:Name="lblComputerSheep" Content="# friendly sheep destroyed" HorizontalAlignment="Left" Margin="487,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.385" Width="199" HorizontalContentAlignment="Right" Foreground="Red"/>
+        <Label x:Name="lblGamesPlayed" Content="# Games Played" HorizontalAlignment="Left" Margin="342,84,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black"/>
+        <Label x:Name="lblTurns" Content="Turn: #" HorizontalAlignment="Left" Margin="380,112,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="139" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="842" Panel.ZIndex="-1"/>
+
+    </Grid>
+</Window>
